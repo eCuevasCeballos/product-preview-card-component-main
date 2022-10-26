@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap");
+
+/*
+font-family: 'Fraunces', serif;
+font-family: 'Montserrat', sans-serif;
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: hsl(30, 38%, 92%);
+  font-size: 14px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.main-container {
+  margin: 30px auto;
+  padding: 0 30px;
+}
+.grid {
+  max-width: 700px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+}
+.img img {
+  max-width: 100%;
+  display: inherit;
+}
+.card-content {
+  padding: 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+h6.product-category {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 13px;
+  color: hsl(228, 12%, 48%);
+  font-weight: 500;
+}
+h2.product-name {
+  font-family: "Fraunces", serif;
+  font-size: 34px;
+  line-height: 1em;
+  color: hsl(212, 21%, 14%);
+}
+p.product-description {
+  color: hsl(228, 12%, 48%);
+  line-height: 1.5em;
+}
+.price {
+  display: flex;
+  align-items: center;
+}
+p.new-price {
+  font-family: "Fraunces", serif;
+  font-size: 35px;
+  color: hsl(158, 36%, 37%);
+  padding-right: 25px;
+}
+p.old-price {
+  color: hsl(228, 12%, 48%);
+  text-decoration: line-through;
+}
+button.add-to-cart {
+  background-color: hsl(158, 36%, 37%);
+  border: none;
+  padding: 12px 0;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 1s ease;
+  width: 100%;
+}
+button.add-to-cart img {
+  padding-right: 7px;
+}
+button.add-to-cart:hover {
+  background-color: hsl(212, 21%, 14%);
+}
+@media only screen and (max-width: 375px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .img img {
+    max-height: 300px;
+    width: 100%;
+    object-fit: cover;
+  }
+  .card-content {
+    display: block;
+  }
+  h6.product-category,
+  h2.product-name,
+  p.product-description {
+    padding-bottom: 15px;
+  }
+}
